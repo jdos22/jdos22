@@ -1,4 +1,5 @@
 use Modern::Perl;
+use Regexp::Common::comment;
 
 # Purpose:
 # Get rid of // style comments from kea configuration.
