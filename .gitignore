@@ -1,3 +1,12 @@
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
 
-perl/JSON/.vscode/perl-lang/home/xjds535/dev/git/jdos22/perl/JSON/comment_remove.pl
-perl/JSON/.vscode/perl-lang/home/xjds535/dev/git/jdos22/perl/JSON/comment_remove.pl
+# Local History for Visual Studio Code
+.history/
+
+# Built Visual Studio Code Extensions
+*.vsix
