@@ -12,6 +12,8 @@ use Regexp::Common qw/comment/;
 # So remember that the comments that are hard are not the single line comments
 # but the ones ot the end of the line. Or maybe worse - the ones between 
 # delimiters
+# apparently, the ONLY Regexp::Common::Comment that works is the "C" style,
+# but that was the hard one, so fine.
 
 
 while (<DATA>) {
