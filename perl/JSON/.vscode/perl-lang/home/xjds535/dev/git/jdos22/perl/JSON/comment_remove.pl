@@ -1,1 +1,1 @@
-{"version":5,"vars":[{"containerName":"Modern","name":"Perl","line":0,"kind":2},{"name":"DATA","line":6,"kind":12}]}
+{"vars":[{"name":"Perl","kind":2,"containerName":"Modern","line":0},{"name":"comment","kind":2,"containerName":"Regexp::Common","line":1},{"kind":12,"name":"DATA","line":7}],"version":5}
