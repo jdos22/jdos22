@@ -1,5 +1,5 @@
 use Modern::Perl;
-use Regexp::Common;
+use Regexp::Common qw/comment/;
 
 # Purpose:
 # Get rid of // style comments from kea configuration.
@@ -16,12 +16,17 @@ use Regexp::Common;
 
 while (<DATA>) {
 	chomp;
-	say;
-	s/([\s\S]*?)(?=#)/$1/ && print;
-	s/([\s\S]*?)(?=\/\/)/$1/ && print;
+	my $changed = $_;
+	$changed =~ s/#.*$//g;
+	$changed =~ s/$RE{comment}{C}//;
+	$changed =~ s/\/\/.*$//g;
+	chomp $changed;
+	if ($changed) { say $changed }
+
 }
 
 __DATA__
-This is a line that should parse correctly. Should just print.
-This is a line with a comment. \\ that's all that should print.
-This is a line with a shell style comment. # shouldn't see it.
+// Shouldn't see. Double slashes.
+# Shouldn't see. Octothorpe.
+/* shouldn't see. C style. */
+Should see this. #Shouldn't see this.
