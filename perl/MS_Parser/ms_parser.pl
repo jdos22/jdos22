@@ -13,7 +13,13 @@ my @Extra_List = [
 	"c2.garbanet. A	192.168.26.200\n".
 	"Garbage.net. A NotIP192.168.26.201\n"
 ];
+
+#Semantics are slightly different between production data and the script.
+# I'm parsing the @MS_Test directly - instead of using a loop, and that changes things.
+# In Productions @MS_Test would be a list of pointers. I'm doing a foreach 
+# on them and accessing them as $$loop-var[0]. This doesn't work here.
 my @MS_Test = ["hostname","192.168.0.200",@Extra_List];
+
 
 say $MS_Test[0]->[2]->[0];
 my @Big_List = split '\n',$MS_Test[0]->[2]->[0];
