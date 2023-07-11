@@ -35,3 +35,7 @@ foreach my $Line (@Big_List) {
 		say "Found A record with a passable IP.";
 	}
 }
+
+foreach my $Pointer (@MS_Test) {
+	do say $$Pointer[0]; #As done on the MS side.
+}
